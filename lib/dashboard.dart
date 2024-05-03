@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:curso_flutter_01/widgets/pastelChart.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -16,10 +19,14 @@ class Dashboard extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
+        title: Center(
             child: Text(
           "Mi perfil",
-          style: TextStyle(color: Colors.grey, fontSize: 18),
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 25,
+            fontFamily: GoogleFonts.sendFlowers().fontFamily,
+          ),
         )),
         actions: [
           GestureDetector(
@@ -123,6 +130,56 @@ class Dashboard extends StatelessWidget {
             saldoMesAnterior: 100.0,
             regarcaMesActual: 200.0,
             pasajemesActual: 50.0,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+            child: Text(
+              "Resumen Septiembre 2022",
+              style: TextStyle(color: Colors.grey),
+            ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.bus_alert),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Parada Favorita"),
+                          Text("Mi parada Favorita")
+                        ],
+                      )
+                    ],
+                  ),
+                  Text("33")
+                ],
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              LinearPercentIndicator(
+                percent: 0.5,
+                lineHeight: 15.0,
+                progressColor: Colors.redAccent,
+                backgroundColor: Colors.grey[400],
+                barRadius: const Radius.circular(16),
+              ),
+              Text(
+                "HOLA MUNDO",
+                style: TextStyle(
+                    color: HexColor("#000000"),
+                    fontSize: 35.0,
+                    fontFamily: GoogleFonts.sendFlowers().fontFamily),
+              )
+            ],
           ),
         ]),
       ),
