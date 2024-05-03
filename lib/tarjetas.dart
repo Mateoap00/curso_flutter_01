@@ -156,7 +156,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                               bottom: 10.0,
                             ),
                             child: Icon(
-                              Icons.map,
+                              Icons.route,
                               color: Colors.white,
                               size: 40,
                             ),
