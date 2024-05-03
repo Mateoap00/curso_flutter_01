@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curso_flutter_01/dashboard.dart';
 import 'package:curso_flutter_01/background.dart';
+import 'package:curso_flutter_01/tarjetas.dart';
 import 'package:curso_flutter_01/pagina_con_estado.dart';
 
 class Home extends StatelessWidget {
@@ -18,6 +19,14 @@ class Home extends StatelessWidget {
     Navigator.of(context).push(MaterialPageRoute(
       builder: (context) {
         return const BackgroundPage();
+      },
+    ));
+  }
+
+  void _onPressedTarjetas(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) {
+        return const TarjetasPage();
       },
     ));
   }
@@ -87,7 +96,7 @@ class Home extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.black, fontSize: 18.0)),
               ),
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -113,6 +122,14 @@ class Home extends StatelessWidget {
                     },
                     child: const Text("Background"),
                     color: Colors.amber,
+                  ),
+                  const SizedBox(width: 10.0),
+                  MaterialButton(
+                    onPressed: () {
+                      _onPressedTarjetas(context);
+                    },
+                    child: const Text("Tarjetas"),
+                    color: Colors.pink,
                   ),
                 ],
               )

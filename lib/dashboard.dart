@@ -45,143 +45,256 @@ class Dashboard extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
       ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Stack(
-            alignment: const Alignment(-1.0, 0.1),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: const EdgeInsets.only(left: 30),
-                decoration: BoxDecoration(
-                  color: Colors.redAccent,
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                width: ancho,
-                height: 150,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 50.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Pablo Astudillo",
-                            style: style_titles,
-                            textAlign: TextAlign.left,
-                          ),
-                          Row(
+              Stack(
+                alignment: const Alignment(-1.0, 0.1),
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(left: 30),
+                    decoration: BoxDecoration(
+                      color: Colors.redAccent,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    width: ancho,
+                    height: 150,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 50.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Icon(Icons.card_giftcard),
-                              const SizedBox(
-                                width: 10,
+                              Text(
+                                "Pablo Astudillo",
+                                style: style_titles,
+                                textAlign: TextAlign.left,
                               ),
                               Row(
                                 children: [
-                                  Text(
-                                    "SI=H-00054157624",
-                                    style: style_titles,
+                                  const Icon(Icons.card_giftcard),
+                                  const SizedBox(
+                                    width: 10,
                                   ),
-                                  SizedBox(
-                                    width: 50,
-                                  ),
-                                  Text(
-                                    "12.50",
-                                    style: style_titles,
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "SI=H-00054157624",
+                                        style: style_titles,
+                                      ),
+                                      SizedBox(
+                                        width: 50,
+                                      ),
+                                      Text(
+                                        "12.50",
+                                        style: style_titles,
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
+                              const Text(
+                                "Ver perfil",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
                             ],
                           ),
-                          const Text(
-                            "Ver perfil",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 75,
+                    height: 75,
+                    child: const CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://www.w3schools.com/w3images/avatar2.png"),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              PastelChart(
+                saldoMesActual: 200.0,
+                saldoMesAnterior: 100.0,
+                regarcaMesActual: 200.0,
+                pasajemesActual: 50.0,
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                child: Text(
+                  "Resumen Septiembre 2022",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.bus_alert),
+                            SizedBox(
+                              width: 10,
                             ),
-                          ),
-                        ],
-                      ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Parada Favorita"),
+                                Text("Mi parada Favorita")
+                              ],
+                            )
+                          ],
+                        ),
+                        Text("33")
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    LinearPercentIndicator(
+                      percent: 0.5,
+                      lineHeight: 15.0,
+                      progressColor: Colors.redAccent,
+                      backgroundColor: Colors.grey[400],
+                      barRadius: const Radius.circular(16),
                     ),
                   ],
                 ),
               ),
-              Container(
-                width: 75,
-                height: 75,
-                child: const CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://www.w3schools.com/w3images/avatar2.png"),
+              Padding(
+                padding: EdgeInsets.only(bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.bus_alert),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Parada Favorita"),
+                                Text("Mi parada Favorita")
+                              ],
+                            )
+                          ],
+                        ),
+                        Text("33")
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    LinearPercentIndicator(
+                      percent: 0.5,
+                      lineHeight: 15.0,
+                      progressColor: Colors.redAccent,
+                      backgroundColor: Colors.grey[400],
+                      barRadius: const Radius.circular(16),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
-            child: Text(
-              "Resumen Septiembre 2022",
-              style: TextStyle(color: Colors.grey),
-            ),
-          ),
-          PastelChart(
-            saldoMesActual: 200.0,
-            saldoMesAnterior: 100.0,
-            regarcaMesActual: 200.0,
-            pasajemesActual: 50.0,
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
-            child: Text(
-              "Resumen Septiembre 2022",
-              style: TextStyle(color: Colors.grey),
-            ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.bus_alert),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Parada Favorita"),
+                                Text("Mi parada Favorita")
+                              ],
+                            )
+                          ],
+                        ),
+                        Text("33")
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    LinearPercentIndicator(
+                      percent: 0.5,
+                      lineHeight: 15.0,
+                      progressColor: Colors.redAccent,
+                      backgroundColor: Colors.grey[400],
+                      barRadius: const Radius.circular(16),
+                    ),
+                  ],
+                ),
+              ),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [
-                      Icon(Icons.bus_alert),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Parada Favorita"),
-                          Text("Mi parada Favorita")
-                        ],
-                      )
-                    ],
+                  Icon(Icons.message),
+                  SizedBox(
+                    width: 10,
                   ),
-                  Text("33")
+                  Text(
+                    "Reclamos, Sugerencias",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.grey),
+                  ),
                 ],
               ),
               const SizedBox(
-                height: 10.0,
+                height: 10,
               ),
-              LinearPercentIndicator(
-                percent: 0.5,
-                lineHeight: 15.0,
-                progressColor: Colors.redAccent,
-                backgroundColor: Colors.grey[400],
-                barRadius: const Radius.circular(16),
-              ),
-              Text(
-                "HOLA MUNDO",
-                style: TextStyle(
-                    color: HexColor("#000000"),
-                    fontSize: 35.0,
-                    fontFamily: GoogleFonts.sendFlowers().fontFamily),
+              const Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.message,
+                    size: 25,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "SOS - ECU 911",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
               )
             ],
           ),
-        ]),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+        backgroundColor: HexColor("#FF0000"),
       ),
     );
   }
