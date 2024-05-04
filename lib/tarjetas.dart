@@ -12,6 +12,12 @@ class TarjetasPage extends StatefulWidget {
 class _TarjetasPageState extends State<TarjetasPage> {
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+    final isLandscape = mediaQuery.orientation == Orientation.landscape;
+
+    var ancho = MediaQuery.of(context).size.width;
+    var alto = MediaQuery.of(context).size.height;
+
     TextStyle style_titles = const TextStyle(
       color: Colors.white,
       fontSize: 15.0,
@@ -73,7 +79,8 @@ class _TarjetasPageState extends State<TarjetasPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 250,
+                      width: isLandscape ? ancho * 0.50 : ancho * 0.80,
+                      height: isLandscape ? alto * 0.45 : alto * 0.20,
                       decoration: BoxDecoration(
                         color: Colors.blueAccent,
                         borderRadius: BorderRadius.circular(15),
@@ -140,8 +147,8 @@ class _TarjetasPageState extends State<TarjetasPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 115,
-                      height: 100,
+                      width: isLandscape ? ancho * 0.15 : ancho * 0.35,
+                      height: isLandscape ? alto * 0.35 : alto * 0.15,
                       decoration: BoxDecoration(
                         color: Colors.redAccent,
                         borderRadius: BorderRadius.circular(15),
@@ -177,8 +184,8 @@ class _TarjetasPageState extends State<TarjetasPage> {
                       width: 20,
                     ),
                     Container(
-                      width: 115,
-                      height: 100,
+                      width: isLandscape ? ancho * 0.15 : ancho * 0.35,
+                      height: isLandscape ? alto * 0.35 : alto * 0.15,
                       decoration: BoxDecoration(
                         color: Colors.redAccent,
                         borderRadius: BorderRadius.circular(15),
@@ -219,8 +226,8 @@ class _TarjetasPageState extends State<TarjetasPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 115,
-                      height: 100,
+                      width: isLandscape ? ancho * 0.15 : ancho * 0.35,
+                      height: isLandscape ? alto * 0.35 : alto * 0.15,
                       decoration: BoxDecoration(
                         color: Colors.redAccent,
                         borderRadius: BorderRadius.circular(15),
@@ -256,8 +263,8 @@ class _TarjetasPageState extends State<TarjetasPage> {
                       width: 20,
                     ),
                     Container(
-                      width: 115,
-                      height: 100,
+                      width: isLandscape ? ancho * 0.15 : ancho * 0.35,
+                      height: isLandscape ? alto * 0.35 : alto * 0.15,
                       decoration: BoxDecoration(
                         color: Colors.redAccent,
                         borderRadius: BorderRadius.circular(15),
@@ -298,8 +305,8 @@ class _TarjetasPageState extends State<TarjetasPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 250,
-                      height: 75,
+                      width: isLandscape ? ancho * 0.35 : ancho * 0.75,
+                      height: isLandscape ? alto * 0.25 : alto * 0.10,
                       decoration: BoxDecoration(
                         color: Colors.redAccent,
                         borderRadius: BorderRadius.circular(15),
@@ -336,45 +343,45 @@ class _TarjetasPageState extends State<TarjetasPage> {
             ),
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          height: 60,
-          color: HexColor("#fff"),
-          child: Row(
-            children: [
-              IconButton(
-                icon: Icon(
-                  Icons.person,
-                  color: Colors.grey[800],
-                ),
-                onPressed: () {},
-              ),
-              Spacer(), // Use Spacer to push the next IconButton to the end
-              IconButton(
-                icon: Icon(
-                  Icons.route,
-                  color: Colors.grey[800],
-                ),
-                onPressed: () {},
-              ),
-              Spacer(),
-              IconButton(
-                icon: Icon(
-                  Icons.bus_alert,
-                  color: Colors.grey[800],
-                ),
-                onPressed: () {},
-              ),
-              Spacer(), // Use Spacer to push the next IconButton to the end
-              IconButton(
-                icon: Icon(
-                  Icons.credit_card,
-                  color: Colors.redAccent,
-                ),
-                onPressed: () {},
-              ),
-            ],
-          ),
-        ),
+        // bottomNavigationBar: BottomAppBar(
+        //   height: 60,
+        //   color: HexColor("#fff"),
+        //   child: Row(
+        //     children: [
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.person,
+        //           color: Colors.grey[800],
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //       Spacer(), // Use Spacer to push the next IconButton to the end
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.route,
+        //           color: Colors.grey[800],
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //       Spacer(),
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.bus_alert,
+        //           color: Colors.grey[800],
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //       Spacer(), // Use Spacer to push the next IconButton to the end
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.credit_card,
+        //           color: Colors.redAccent,
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //     ],
+        //   ),
+        // ),
         floatingActionButton: ElevatedButton.icon(
           onPressed: () {},
           icon: const Icon(
