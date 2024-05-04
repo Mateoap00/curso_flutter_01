@@ -1,7 +1,3 @@
 # curso_flutter_01
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
+Proyecto final del curso básico de FLutter en UCACUE, Mayo 2024.
