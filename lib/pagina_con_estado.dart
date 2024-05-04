@@ -16,7 +16,7 @@ class _PaginaConEstadoState extends State<PaginaConEstado> {
           title: const Text('Pagina con estado'),
         ),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.0),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
             children: [
               TextFormField(
@@ -38,7 +38,7 @@ class _PaginaConEstadoState extends State<PaginaConEstado> {
               const SizedBox(height: 20.0),
               Text(
                 nombre,
-                style: TextStyle(fontSize: 32.0),
+                style: const TextStyle(fontSize: 32.0),
               ),
             ],
           ),

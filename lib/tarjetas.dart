@@ -56,7 +56,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         bottom: 10.0,
                         left: 20.0,
                       ),
@@ -72,7 +72,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -101,7 +101,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                               left: 20.0,
                             ),
@@ -111,7 +111,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                               left: 20.0,
                             ),
@@ -121,7 +121,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                               left: 20.0,
                             ),
@@ -169,7 +169,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                             ),
                             child: Text(
@@ -180,7 +180,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -206,7 +206,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                             ),
                             child: Text(
@@ -219,7 +219,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -248,7 +248,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                             ),
                             child: Text(
@@ -259,7 +259,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -285,7 +285,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               bottom: 10.0,
                             ),
                             child: Text(
@@ -298,7 +298,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -326,7 +326,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               left: 5.0,
                             ),
                             child: Text(

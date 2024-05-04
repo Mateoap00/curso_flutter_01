@@ -9,8 +9,8 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var ancho = MediaQuery.of(context).size.width;
-    var alto = MediaQuery.of(context).size.height;
+    // var ancho = MediaQuery.of(context).size.width;
+    // var alto = MediaQuery.of(context).size.height;
 
     TextStyle style_titles = const TextStyle(
       color: Colors.white,
@@ -60,7 +60,6 @@ class Dashboard extends StatelessWidget {
                       color: Colors.redAccent,
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    width: ancho,
                     height: 150,
                     child: Row(
                       children: [
@@ -84,15 +83,11 @@ class Dashboard extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text(
-                                        "SI=H-00054157624",
+                                        "SI=H-000541",
                                         style: style_titles,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 50,
-                                      ),
-                                      Text(
-                                        "12.50",
-                                        style: style_titles,
                                       ),
                                     ],
                                   ),
@@ -121,7 +116,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30.0,
               ),
               PastelChart(
@@ -138,7 +133,7 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -177,7 +172,7 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -216,7 +211,7 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -293,8 +288,8 @@ class Dashboard extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: const Icon(Icons.add),
         backgroundColor: HexColor("#FF0000"),
+        child: const Icon(Icons.add),
       ),
     );
   }

@@ -4,7 +4,6 @@ import 'package:curso_flutter_01/dashboard.dart';
 import 'package:curso_flutter_01/background.dart';
 import 'package:curso_flutter_01/tarjetas.dart';
 import 'package:curso_flutter_01/pagina_con_estado.dart';
-import 'package:curso_flutter_01/listaPage.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
